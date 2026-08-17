@@ -11,8 +11,10 @@ while True:
     if choice == 1:
         register()
     elif choice  == 2:
-        if login():
-            atm()
+        user_phone = login()
+
+    if user_phone:
+        atm(user_phone)
     elif choice == 3:
         break
     else:
