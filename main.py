@@ -1,6 +1,7 @@
 from childs.welcome import welcome
 from childs.register import register
 from childs.login import login
+from childs.atm.atm import atm
 while True:
     welcome()
 
@@ -10,7 +11,8 @@ while True:
     if choice == 1:
         register()
     elif choice  == 2:
-        login()
+        if login():
+            atm()
     elif choice == 3:
         break
     else:
